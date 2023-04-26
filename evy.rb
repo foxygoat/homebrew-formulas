@@ -5,21 +5,21 @@
 class Evy < Formula
   desc "Evy is a simple programming language."
   homepage "https://evy.dev"
-  version "0.0.115"
+  version "0.0.116"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.115/evy_0.0.115_darwin_amd64.tar.gz"
-      sha256 "84ab9eed80e4b225e8fd0c28e9ccd7ea4d116147e91bf170e90dc825b0532b16"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.116/evy_0.0.116_darwin_amd64.tar.gz"
+      sha256 "a2678bcdb72516f1e112ea855e67cdde9290970f7a65a1c6e6a0c7b26a94bee9"
 
       def install
         bin.install "evy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.115/evy_0.0.115_darwin_arm64.tar.gz"
-      sha256 "2508a83d566d7d4807ef4d7128b4ba447d116ae3cfeec0b8dc8ac6670abc8181"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.116/evy_0.0.116_darwin_arm64.tar.gz"
+      sha256 "3694353e149f20952bba31867cbb26c14a34e01e889178127f163d449aada5cf"
 
       def install
         bin.install "evy"
@@ -28,17 +28,17 @@ class Evy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.115/evy_0.0.115_linux_amd64.tar.gz"
-      sha256 "d821d544ed99742e3f98613bcce9d40e4db3c29e7f1cd5f69c542c7c48b99f9b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.116/evy_0.0.116_linux_arm64.tar.gz"
+      sha256 "387ae052dd1a651a575c3b3206ef6cd8f63c5f4daa7f3d60c92c00ca21970912"
 
       def install
         bin.install "evy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.115/evy_0.0.115_linux_arm64.tar.gz"
-      sha256 "3eed77580b6b474ee38b456b31fec21903e43fe842343f168b2d681cb0c0dd68"
+    if Hardware::CPU.intel?
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.116/evy_0.0.116_linux_amd64.tar.gz"
+      sha256 "3459323b207f33577d35e8370d8e912e1f5708ef8b741cae5252587be5f44f6e"
 
       def install
         bin.install "evy"
