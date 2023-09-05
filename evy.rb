@@ -5,21 +5,21 @@
 class Evy < Formula
   desc "Evy is a simple programming language."
   homepage "https://evy.dev"
-  version "0.0.180"
+  version "0.0.181"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.180/evy_0.0.180_darwin_arm64.tar.gz"
-      sha256 "4ea8d70bcb0ae7bd52eb5fb958b1c3395d8f101e10d255b59eaf5bf09f4053f3"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.181/evy_0.0.181_darwin_arm64.tar.gz"
+      sha256 "7ecb32c6e87c2ad3bc01eeb9fad707992aad166e1809bbe674e330a6e463556e"
 
       def install
         bin.install "evy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.180/evy_0.0.180_darwin_amd64.tar.gz"
-      sha256 "56e3759f6c0cb89df349d3b0e3c93cd01abd565b1b631b65e6dbf3a79ee80d97"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.181/evy_0.0.181_darwin_amd64.tar.gz"
+      sha256 "774939659781a3e1af4f71dd3bb7c9219b38e62335426274052a6283eba175bd"
 
       def install
         bin.install "evy"
@@ -29,16 +29,16 @@ class Evy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.180/evy_0.0.180_linux_arm64.tar.gz"
-      sha256 "4e0f964adaf4166a30da62ccc4a9e7c8c4a7d2d1caa033cc6f47d96e76d9b8e0"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.181/evy_0.0.181_linux_arm64.tar.gz"
+      sha256 "458d277e294d50a8ebef94a2574cdbb88c555c9ab111e6a644b0c4d761bd1087"
 
       def install
         bin.install "evy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foxygoat/evy/releases/download/v0.0.180/evy_0.0.180_linux_amd64.tar.gz"
-      sha256 "2abb61aef18a2392ea97c40a094578290ce86e774aaadc82b8a37a031eb07e10"
+      url "https://github.com/foxygoat/evy/releases/download/v0.0.181/evy_0.0.181_linux_amd64.tar.gz"
+      sha256 "6984ac5038e6fbaa12919e2a39431e9525402fd12d55d1bb9b51366f230cc9ed"
 
       def install
         bin.install "evy"
